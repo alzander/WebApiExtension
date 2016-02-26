@@ -59,6 +59,14 @@ class WebApiContext implements ApiClientAwareContext
     }
 
     /**
+     * @return \GuzzleHttp\Message\ResponseInterface
+     */
+    public function getResponse()
+    {
+        return $this->response;
+    }
+
+    /**
      * Adds Basic Authentication header to next request.
      *
      * @param string $username
