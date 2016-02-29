@@ -82,6 +82,17 @@ class WebApiContext implements ApiClientAwareContext
     }
 
     /**
+     * Sets the standard JSON request headers to all requests
+     *
+     * @Given /^all requests are in JSON$/
+     */
+    public function allRequestsAreInJSON()
+    {
+        $this->addHeader("Content-Type", "application/json");
+        $this->addHeader("Accept", "application/json");
+    }
+
+    /**
      * Sets a HTTP Header.
      *
      * @param string $name  header name
